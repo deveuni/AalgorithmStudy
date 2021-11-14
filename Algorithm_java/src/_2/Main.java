@@ -26,6 +26,24 @@ public class Main {
 			System.out.println(arr[i]+" ");
 		}
 		
+		
+		// 2번째 방법 
+		// An
+		// An = An-1 + An-2; n>=3 
+		// a1 = 1, a2 = 1
+		int prevPrevNum = 1; // An -2
+		int prevNum = 1; // An-2
+		System.out.println(prevPrevNum+" ");
+		System.out.println(prevNum+" ");
+		
+		for(int i=3; i<=10; i++) {
+			int nNum = prevPrevNum+prevNum;
+			System.out.println(nNum+" ");
+			
+			prevPrevNum = prevNum;
+			prevNum = nNum;
+		}
+		
 	}
 
 }
