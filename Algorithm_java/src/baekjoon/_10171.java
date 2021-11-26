@@ -7,6 +7,9 @@ import java.io.OutputStreamWriter;
 // https://www.acmicpc.net/problem/10171
 // 고양이
 
+// 출력에대한 방법 4가지 
+// System클래스(System.out.println()), BufferedWriter, StringBuilder, StringBuffer
+
 public class _10171 {
 
 	public static void main(String[] args) throws IOException {
