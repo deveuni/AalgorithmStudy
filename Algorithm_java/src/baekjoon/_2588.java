@@ -71,6 +71,30 @@ public class _2588 {
 		System.out.println(A * Integer.parseInt(B));
 		
 		
+		// 방법 4 - 성능개선
+	/*	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		 
+		int A = Integer.parseInt(br.readLine());
+		int B = Integer.parseInt(br.readLine());
+		
+		br.close();
+        
+		StringBuilder sb = new StringBuilder();
+        
+		sb.append(A * (B%10));
+		sb.append('\n');
+		
+		sb.append(A * ((B%100)/10));
+		sb.append('\n');
+        
+		sb.append(A * (B/100));
+		sb.append('\n');
+        
+		sb.append(A * B);
+ 
+		System.out.print(sb);
+        */
+		
 		
 	}
 
