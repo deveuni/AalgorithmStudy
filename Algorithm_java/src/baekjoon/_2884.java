@@ -28,7 +28,8 @@ public class _2884 {
 		int H = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-			if(M < 45 ) {
+	/*	
+		if(M < 45 ) {
 			H--;			// 시(hour) 1 감소
 			M = 60- (45 - M); // 분(min) 감소
 			if(H < 0) {
@@ -38,6 +39,28 @@ public class _2884 {
 		} else {
 			System.out.println(H + " " + (M - 45));
 		}
+			
+*/		
+		// 성능 개선 문제 
+		// - 출력을 StringBuilder로 바꿔준다.ㅏ
+		
+		StringBuilder sb = new StringBuilder();
+			
+		if(M < 45) {
+			if(H == 0) {
+				H = 23;
+				sb.append(H).append(' ');
+			}else {
+				H--;
+				sb.append(H).append(' ');
+			}
+			sb.append(M = 60 - (45 - M));
+		}
+		else {
+			sb.append(H).append(' ').append(M - 45);
+		}
+		
+		System.out.println(sb);
 		
 	}
 	
