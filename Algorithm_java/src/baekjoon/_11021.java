@@ -34,15 +34,37 @@ public class _11021 {
 		
 		int T = Integer.parseInt(br.readLine());
 		
-		StringTokenizer st;
+		StringBuilder sb = new StringBuilder();
+		//StringTokenizer st;
+		
+		// 방법 2 -1 
+		/*
 		for(int i = 1; i <= T; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			System.out.println("Case #" + i + ": "
 					+(Integer.parseInt(st.nextToken())
 					+Integer.parseInt(st.nextToken())));
 		}
-		br.close();
+		*/
 		
+		// 방법 2-2 StringBuilder
+		/*
+		for(int i = 1; i <= T; i++) {
+			st = new StringTokenizer(br.readLine()," ");
+			sb.append("Case #").append(i).append(": ")
+			.append(Integer.parseInt(st.nextToken())
+			+Integer.parseInt(st.nextToken())).append('\n');	
+		}
+		br.close();
+		*/
+		
+		// 방법 2-3 CharAt()
+		for(int i = 1; i <= T; i++) {
+			String str = br.readLine();
+			sb.append("Case #").append(i).append(": ")
+			.append(str.charAt(0)-'0'+str.charAt(2)-'0').append('\n');
+		}
+		System.out.println(sb);
 	}
 
 }
