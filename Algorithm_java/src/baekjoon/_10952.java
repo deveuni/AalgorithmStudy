@@ -14,9 +14,11 @@ public class _10952 {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		StringTokenizer st;
+		
 		StringBuilder sb = new StringBuilder();
 		
+		// 방법 1
+		StringTokenizer st;
 		while(true) {
 		
 			st = new StringTokenizer(br.readLine()," ");
@@ -30,6 +32,24 @@ public class _10952 {
 			sb.append((A+B)).append('\n');
 		}
 		System.out.println(sb);
+		
+		
+		// 방법 2 
+		while(true) {
+			
+			String str = br.readLine();
+			
+			int a = str.charAt(0) - 48;
+			int b = str.charAt(2) - 48;
+			
+			if(a==0 && b==0) {
+				break;
+			}
+			
+			sb.append((a+b)).append('\n');
+		}
+		System.out.println(sb);
+		
 	}
 
 }
