@@ -7,6 +7,8 @@ import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/10952
 // A+B-5
+// 입력의 종료는 더이상 읽을 수 있는 데잍 (EOF)가 없을 때 종료한다.
+
 
 public class _10952 {
 
