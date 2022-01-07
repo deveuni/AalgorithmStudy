@@ -1,5 +1,8 @@
 package baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/2577
@@ -10,7 +13,7 @@ import java.util.Scanner;
 
 public class _2577 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		
 
 		// 방법 1 
@@ -40,7 +43,23 @@ public class _2577 {
 		*/
 		
 		// 방법 2 
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
+		int[] arr = new int[10];
+		
+		int val = Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine()) * Integer.parseInt(br.readLine());
+		
+		String str = String.valueOf(val);
+		// val의 Int형을 String 형으로 변환해준 뒤 
+		
+		for(int i=0; i < str.length(); i++) {
+			arr[(str.charAt(i)-48)]++;
+		}
+		// for문을 통해 해당 문자열의 문자값 -48을 추출해내서 int배열의 index 값을 1 증가시킨다?????
+		
+		for(int v : arr) {
+			System.out.println(v);
+		}
 	}
 
 }
