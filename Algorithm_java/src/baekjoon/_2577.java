@@ -43,6 +43,7 @@ public class _2577 {
 		*/
 		
 		// 방법 2 
+	/*	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int[] arr = new int[10];
@@ -60,6 +61,26 @@ public class _2577 {
 		for(int v : arr) {
 			System.out.println(v);
 		}
+		
+		*/
+		
+		// 방법 3
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		 
+		
+		int val = Integer.parseInt(br.readLine())*Integer.parseInt(br.readLine())*Integer.parseInt(br.readLine());
+		int[] arr = new int[10];
+		
+		while(val!=0) {
+			arr[val%10]++;
+			val/=10;
+		}
+		
+		for(int result : arr) {
+			System.out.println(result);
+		}
+		
 	}
 
 }
