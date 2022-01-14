@@ -42,13 +42,15 @@ public class _1546 {
 		*/
 		
 		// 방법2 - 배열 X
+		// max라는 변수 하나를 생성하여 입력받으면서 max와 비교한 뒤 큰 수가 max로 초기화 해주는 방식
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int N = Integer.parseInt(br.readLine()); // 입력 개수
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
-		int max = -1;
+		int max = -1; // 입력받을 값이 0보다 크거나 같기 때문에 -1로 초기화
 		double sum = 0.0;
 		
 		for(int i = 0; i < N; i++) {
