@@ -1,6 +1,10 @@
 package baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/2908
 // 상수
@@ -10,7 +14,7 @@ import java.util.Scanner;
 
 public class _2908 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		// 방법1 - Scanner + StringBuilder.reverse()
 		Scanner in = new Scanner(System.in);
@@ -32,6 +36,21 @@ public class _2908 {
 		System.out.println(A > B ? A : B);
 		
 		// 방법2 - BufferedReader + StringBuilder.reverse()
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		
+		int C = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
+		int D = Integer.parseInt(new StringBuilder(st.nextToken()).reverse().toString());
+		
+		// Scanner을 사용했을 때는 int 타입으로 받았기 때문에 객체를 생성할 때 append() 메소드를 썼지만
+		// 넣어주는 인자를 String 타입이면 append()를 사용할 필요가 없다.
+		
+		System.out.println(C > D ? C:D);
+		
+		
+		
+		
 		// 방법3 - System.in.read() + 수학연산
 		
 	}
