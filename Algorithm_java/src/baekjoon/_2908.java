@@ -49,9 +49,22 @@ public class _2908 {
 		System.out.println(C > D ? C:D);
 		
 		
-		
-		
 		// 방법3 - System.in.read() + 수학연산
+		
+		int E = 0;
+		int F = 0;
+		
+		E += System.in.read() - 48;
+		E += (System.in.read() - 48)*10;
+		E += (System.in.read() - 48)*100;
+		
+		System.in.read(); // 공백
+		
+		F += System.in.read() - 48;
+		F += (System.in.read() - 48)*10;
+		F += (System.in.read() - 48)*100;
+		
+		System.out.println(E > F ? E : F);
 		
 	}
 
